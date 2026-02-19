@@ -44,7 +44,7 @@ pip list
 pip install RPi.GPIO 
 ```
 
-### Запуск
+## Запуск
 Создать новую tmux‑сессию (для долгих тестов):
 ```
 tmux new -s testRTC
