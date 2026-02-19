@@ -33,33 +33,36 @@ MAC‑адрес первого сетевого интерфейса.
 
 ## Создать окружение и активировать его:
 ```
-python3 -m venv venv 
-source venv/bin/activate 
+python3 -m venv venv
+source venv/bin/activate
+(deactivate -- выйти из окружения)
 ```
 
 ## Установить зависимости:
 ```
+pip list
 pip install RPi.GPIO 
 ```
 
 ### Запуск в tmux (рекомендуется для долгих тестов)
 Создать новую tmux‑сессию:
 ```
-tmux new -s power_test
+tmux new -s testRTC
 ```
 
-## Активировать виртуальное окружение внутри tmux:
-Kod
+## Активировать виртуальное окружение внутри tmux и запустить тест:
+```
 source venv/bin/activate 
-
-## Запустить скрипт:
-python3 all.py 
+python3 testRTC.py 
+```
 
 ## Отсоединиться от сессии, оставив скрипт работать:
-Ctrl + B, затем D 
+[Ctrl + B], затем D 
 
 ## Вернуться в сессию позже:
-tmux attach -t power_test 
+```
+tmux attach -t testRTC 
+```
 
 ## Логирование
 Все результаты сохраняются в файл results.log. Каждая строка — один тест:
