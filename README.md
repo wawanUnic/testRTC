@@ -82,3 +82,5 @@ tmux attach -t testRTC
 - длительность выключения
 - путь к лог‑файлу
 - GPIO‑пин реле
+
+![UMKA](pic/UMKA.png)
